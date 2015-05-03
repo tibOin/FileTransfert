@@ -1,6 +1,6 @@
 require_relative '../Config/require'
 
-class Client_File
+class Client
   include Request_maker
 
   def initialize()
@@ -20,39 +20,6 @@ class Client_File
   def read_request()
     type, header_options = parse_requests(@serveur)
   end
-
-=begin
-  def parse_requests(sock)
-
-    request = sock.gets.chomp
-    header_options = request.split(HEADSPLIT)
-    type = header_options.first
-
-
-    puts request
-    puts "#{header_options}"
-    puts type
-
-    case type
-      when 'upload'
-
-        filename = header_options[1]
-        filesize = header_options.last
-        sock.puts('ready')
-        download(sock, filename, filesize)
-
-      when 'download'
-
-        puts 'download request'
-
-      else
-
-        puts 'erreur'
-    end
-
-  end
-
-=end
 
 end
 

@@ -16,8 +16,10 @@ module Request_maker
 
         filename = header_options[1]
         filesize = header_options.last
-        sock.puts('ready')
-        Fly.download(sock, filename, filesize)
+
+        return type, filename, filesize
+        #sock.puts('ready')
+        #Fly.download(sock, filename, filesize)
 
       when 'download'
 
@@ -25,9 +27,7 @@ module Request_maker
         outname = header_options.last
         filepath = "../Downloads/#{filename}"
 
-        puts filename
-        puts outname
-        puts filepath
+
 
         send_up_request(sock, filepath, outname)
 
