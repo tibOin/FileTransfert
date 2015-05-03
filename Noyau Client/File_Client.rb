@@ -28,6 +28,7 @@ class Client_File
     header_options = request.split(HEADSPLIT)
     type = header_options.first
 
+
     puts request
     puts "#{header_options}"
     puts type
