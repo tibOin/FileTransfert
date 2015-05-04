@@ -4,7 +4,7 @@ require_relative 'com_protocole'
 
 module Request_maker
 
-  def parse_request(request)
+  def Request_maker.parse_request(request)
 
     header_options = request.split(Protocole_communication::HEADSPLIT)
     return header_options
