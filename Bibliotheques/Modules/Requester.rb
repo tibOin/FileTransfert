@@ -3,38 +3,10 @@ require_relative '../Libs/Fly'
 
 module Request_maker
 
-  def parse_requests(sock)
+  def parse_requests(request)
 
-    request = sock.gets.chomp
     header_options = request.split(Protocole_communication::HEADSPLIT)
-    puts header_options
-    type = header_options.first
-    puts type
-
-    case type
-      when 'upload'
-
-        filename = header_options[1]
-        filesize = header_options.last
-
-        return type, filename, filesize
-        #sock.puts('ready')
-        #Fly.download(sock, filename, filesize)
-
-      when 'download'
-
-        filename = header_options[1]
-        outname = header_options.last
-        filepath = "../Downloads/#{filename}"
-
-
-
-        send_up_request(sock, filepath, outname)
-
-      else
-
-        puts 'erreur'
-    end
+    return header_options
 
   end
 
