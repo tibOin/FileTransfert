@@ -4,14 +4,14 @@ require_relative 'com_protocole'
 
 module Request_maker
 
-  def parse_requests(request)
+  def Request_maker.parse_requests(request)
 
     header_options = request.split(Protocole_communication::HEADSPLIT)
     return header_options
 
   end
 
-  def forge_request(options = [])
+  def Request_maker.forge_request(options = [])
     type = options[0]
 
     case type
