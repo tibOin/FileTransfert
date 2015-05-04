@@ -1,6 +1,6 @@
 # Edited with nano
 
-require_relative '../Config/com_protocole'
+require_relative 'com_protocole'
 
 module Request_maker
 
