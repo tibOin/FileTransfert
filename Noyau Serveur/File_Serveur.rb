@@ -3,6 +3,7 @@ require_relative '../Configurations/Requires/require'
 class Serveur
   include Protocole_communication
   include Request_maker
+  include Fly
 
   def initialize()
 
@@ -37,10 +38,29 @@ class Serveur
     case type
 
       when 'download'
-        puts ''
+        request = forge_request('upload', 'TestFileOriginal.txt', 'TestFileCopie.txt')
+
+        if request == false
+          raise "Erreur lors de la création de la requête" and exit
+        else
+          @client.puts request
+        end
 
       when 'upload'
 
+        filename = header_options[1]
+        filesize = header_options.last
+
+        @client.puts 'DLReady'
+        download(@cl, filename, filesize)
+
+      when 'DLReady'
+        path = '../Telechargements/TestFileOriginal.txt'
+        size = File.size(path)
+        upload(@client, path, size)
+
+      else
+        puts 'not implemented yet'
     end
 
   end

@@ -10,7 +10,7 @@ module Protocole_communication
 ########################################################################################################################
 #                                                  Création Paquet                                                     #
 ########################################################################################################################
-  def Protocole_communication.forge_paquet(header, content='')
+  def forge_paquet(header, content='')
 
     if content != ''
       paquet = "#{header}#{SPLITMARK}#{content}"
@@ -21,7 +21,7 @@ module Protocole_communication
     return paquet
   end
 
-  def Protocole_communication.forge_header(type, nom_fichier='', taille_fichier='')
+  def forge_header(type, nom_fichier='', taille_fichier='')
 
     case type
       when 'upload'
@@ -38,7 +38,7 @@ module Protocole_communication
 ########################################################################################################################
 #                                                    Lecture Paquet                                                    #
 ########################################################################################################################
-  def Protocole_communication.split_paquet(paquet)
+  def split_paquet(paquet)
 
     header, content = paquet.split(SPLITMARK)
 
@@ -50,7 +50,7 @@ module Protocole_communication
 
   end
 
-  def Protocole_communication.split_header(header)
+  def split_header(header)
     header_options = header.split(HEADSPLIT)
     return header_options
   end

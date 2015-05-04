@@ -1,10 +1,10 @@
 module Fly
 
-  def Fly.download(sock, filename, filesize)
+  def download(sock, filename, filesize)
 
     puts 'start download'
     size = 1024 * 1024 * 10
-    path = "../Downloads/#{filename}"
+    path = "../Telechargements/#{filename}"
 
     puts filesize
 
@@ -24,7 +24,7 @@ module Fly
 
   end
 
-  def Fly.upload(sock, filepath, filesize)
+  def upload(sock, filepath, filesize)
 
     size = 1024 * 1024 * 10
     current_size = 0
@@ -45,7 +45,7 @@ module Fly
 
   end
 
-  def Fly.show_progress(nom, current, total, upload=false)
+  def show_progress(nom, current, total, upload=false)
 
     progress = (current.to_f/total.to_f).round(2)
 
