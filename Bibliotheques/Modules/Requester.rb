@@ -1,5 +1,4 @@
 require_relative '../Config/com_protocole'
-require_relative '../Libs/Fly'
 
 module Request_maker
 
@@ -10,17 +9,20 @@ module Request_maker
 
   end
 
-  def forge_request(type, filename = 'TestVideoOriginal.mp4',  outname = 'TestVideoCopie.mp4')
+  def forge_request(options = [])
+    type = options[0]
+    opiton = options[1]
+    option = options[2]
 
     case type
 
       when 'upload'
-        filesize = File.size("../Downloads/#{filename}")
-        request = Protocole_communication.forge_header(type, outname, filesize)
+        filesize = File.size("../Downloads/#{opiton}")
+        request = Protocole_communication.forge_header(type, option, filesize)
         return request
 
       when 'download'
-        request = Protocole_communication.forge_header(type, filename, outname)
+        request = Protocole_communication.forge_header(type, opiton, option)
         return request
 
       else
