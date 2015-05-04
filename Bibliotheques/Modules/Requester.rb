@@ -11,18 +11,16 @@ module Request_maker
 
   def forge_request(options = [])
     type = options[0]
-    opiton = options[1]
-    option = options[2]
 
     case type
 
       when 'upload'
-        filesize = File.size("../Downloads/#{opiton}")
+        filesize = File.size("../Downloads/#{options[1]}")
         request = Protocole_communication.forge_header(type, option, filesize)
         return request
 
       when 'download'
-        request = Protocole_communication.forge_header(type, opiton, option)
+        request = Protocole_communication.forge_header(type, options[1], options[2])
         return request
 
       else
@@ -32,19 +30,6 @@ module Request_maker
 
   end
 
-  def send_request(sock, request)
-
-    begin
-      sock.puts(request)
-    rescue
-      raise "Impossible d'envoyer la requête : '#{request}'"
-    end
-
-  end
-
-  def read_answer(sock)
-
-  end
 
   def send_up_request(sock, filepath = '../Downloads/TestVideoOriginal.mp4', outname = 'TestVideoCopie.mp4')
     head_type = 'upload'
