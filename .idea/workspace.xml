@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b20830f-3a5b-4068-adbc-55676946550d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Telechargements/TestFileOriginal.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Noyau Serveur/File_Serveur.rb" afterPath="$PROJECT_DIR$/Noyau Serveur/File_Serveur.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FileTransfert.iws" />
@@ -31,7 +29,7 @@
       <file leaf-file-name="File_Serveur.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Noyau Serveur/File_Serveur.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.994003" vertical-offset="147" max-vertical-offset="1155">
+            <state vertical-scroll-proportion="1.2143928" vertical-offset="0" max-vertical-offset="1155">
               <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
               <folding />
             </state>
@@ -81,8 +79,8 @@
       <file leaf-file-name="Requester.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Bibliotheques/Modules/Requester.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1635">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1065">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -393,7 +391,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430692160562</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Début du développement">
+      <created>1430715742731</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1430715742731</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -457,8 +461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Bibliotheques/Modules/Requester.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1635">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1065">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -497,7 +501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Noyau Serveur/File_Serveur.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.994003" vertical-offset="147" max-vertical-offset="1155">
+        <state vertical-scroll-proportion="1.2143928" vertical-offset="0" max-vertical-offset="1155">
           <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
           <folding />
         </state>
